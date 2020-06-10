@@ -51,3 +51,4 @@ const requestHandler = (req, res) => {
 //Alternative 2 - to above type of exports
 exports.handler = requestHandler;
 exports.someText = 'some hard coded text';
+

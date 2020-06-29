@@ -5,14 +5,14 @@ const bodyParser = require('body-parser');
 const app = express();
 
 //setting the default engine to pug
-app.set('view engine', 'pug'); 
+app.set('view engine', 'pug');
 //directories to look for files
-app.set('views', 'views'); 
+app.set('views', 'views');
 
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/admin', adminData.routes);
